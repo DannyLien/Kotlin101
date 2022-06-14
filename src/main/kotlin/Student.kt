@@ -7,12 +7,15 @@ fun main() {
         Student("005", "Jack", 90, 95)
     )
 
-    for (i in 0..students.size-1) {
-        students.get(i).print()
-    }
-
-    for (stu in students) {
-        stu.print()
+//    for (i in 0..students.size-1) {
+//        students.get(i).print()
+//    }
+//
+//    for (stu in students) {
+//        stu.print()
+//    }
+    students.forEach { student ->
+        student.print()
     }
 }
 
