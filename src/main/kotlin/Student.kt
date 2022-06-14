@@ -14,9 +14,16 @@ fun main() {
 //    for (stu in students) {
 //        stu.print()
 //    }
+
+    println("//---------------------------------")
+    val eng = students.filter { it.english >= 90 }.toList()
+    eng.forEach { it.print() }
+    println("//---------------------------------")
+
     students.forEach { student ->
         student.print()
     }
+
 }
 
 class Student(
