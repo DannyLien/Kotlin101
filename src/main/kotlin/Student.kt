@@ -34,8 +34,23 @@ class Student(
 ) {
     constructor(id: String, name: String) : this(id, name, 0, 0)
 
+    fun getAverage(): Int {
+        return (english + math) / 2
+    }
+
+    fun grade(): String {
+        val grade = when (getAverage() / 10) {
+            in 9..10 -> "A"
+            8 -> "B"
+            7 -> "C"
+            6 -> "D"
+            else -> "F"
+        }
+        return grade
+    }
+
     fun print() {
-        println("$id\t$name\t$english\t$math")
+        println("$id\t$name\t$english\t$math\t${getAverage()}\t${grade()}")
     }
 
 }
