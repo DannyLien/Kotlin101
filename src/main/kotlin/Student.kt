@@ -26,7 +26,7 @@ fun main() {
 
 }
 
-class Student(
+data class Student(
     val id: String,
     val name: String,
     var english: Int,
