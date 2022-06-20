@@ -3,16 +3,46 @@ class Poker {
 
 
 fun main() {
-    val deck = mutableListOf<Int>()
 
+    println("----------Set-------------------")
+    val set = mutableSetOf<Int>()
+    set.add(3)
+    set.add(5)
+    set.add(1)
+    println(set)
+    set.forEach {
+        println(it)
+    }
+
+    println("----------Map-------------------")
+    val map = mapOf<Int, String>(
+        0 to "星期日",
+        1 to "星期一",
+        2 to "星期二",
+        3 to "星期三",
+        4 to "星期四",
+        5 to "星期五",
+        6 to "星期六",
+    )
+    println(map.get(2))
+//    map.put(7,"NON")   //mutableMapOf<Int, String>
+
+    println("---------Deck------------------")
+    val deck = mutableListOf<Int>()
     for (i in 0 until 52) {
         deck.add(i)
     }
     printDeck(deck)
 
-    println("----------------------------------")
+    println("--------deck shuffle()------------")
     deck.shuffle()
     printDeck(deck)
+
+    println("--------deck shuffle first--------")
+    val card1 = deck[(0..51).shuffled().first()]
+    val card2 = deck[(0..51).shuffled().first()]
+    println(card1)
+    println(card2)
 
 }
 
