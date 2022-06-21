@@ -27,6 +27,10 @@ fun main() {
     println(map.get(2))
 //    map.put(7,"NON")   //mutableMapOf<Int, String>
 
+    println("---------ParkingLot------------")
+    var parkingLot = mutableMapOf<String, Car>()
+    parkingLot.put("ABC-123", Car("ABC-123", System.currentTimeMillis()))
+
     println("---------Deck------------------")
     val deck = mutableListOf<Int>()
     for (i in 0 until 52) {
@@ -62,4 +66,8 @@ fun printDeck(deck: List<Int>) {
         if (count % 13 == 0) println()
     }
 
+}
+
+data class Car(val id: String, val enter: Long, val leave: Long = 0) {
+//    constructor(id:String, enter: Long):this(id, enter, 0)
 }
