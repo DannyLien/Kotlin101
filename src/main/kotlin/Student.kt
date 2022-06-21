@@ -29,10 +29,10 @@ fun main() {
 data class Student(
     val id: String,
     val name: String,
-    var english: Int,
-    var math: Int
+    var english: Int = 0,
+    var math: Int = 0
 ) {
-    constructor(id: String, name: String) : this(id, name, 0, 0)
+//    constructor(id: String, name: String) : this(id, name, 0, 0)
 
     fun getAverage(): Int {
         return (english + math) / 2
